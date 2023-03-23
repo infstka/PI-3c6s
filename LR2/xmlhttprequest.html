@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>xmlhttprequest.html</title>
+        <meta name="description">
+    </head>
+    <body>
+        <div id="text"></div>
+    </body>
+    <script>
+        var hr = new XMLHttpRequest();
+        hr.open("GET", "/api/name");
+        hr.send();
+        hr.onload = function() {
+        let text = document.getElementById("text");
+        console.log(hr.status)
+        if(hr.status == 200) {
+            text.innerHTML = hr.responseText;
+        }
+        else {
+            text.innerHTML = "task4 - error"
+        }
+        }
+    </script>
+</html>
