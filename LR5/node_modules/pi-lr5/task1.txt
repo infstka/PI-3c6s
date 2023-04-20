@@ -1,0 +1,3 @@
+npm view nodemailer
+npm install nodemailer
+npm ls nodemailer
